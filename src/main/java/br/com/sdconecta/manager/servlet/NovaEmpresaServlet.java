@@ -17,20 +17,14 @@ public class NovaEmpresaServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		System.out.println("Cadastrando nova empresa");
-		String nome = request.getParameter("nome");
-		
-		Empresa empresa = new Empresa();
-		empresa.setNome(nome);
 		
 		Banco banco = new Banco();
-		banco.add(empresa);
+		banco.add( new Empresa( request.getParameter("nome") ) );
 		
-		PrintWriter out = response.getWriter();
 		
-		out.print("<html><header>Ola, " + nome +", Bem Vinda! </header> <body><div>Empresa " + nome + " cadastrada!</div></body></html>");
+		request.setAttribute("Empresa", request.getParameter("nome") );
+		request.getRequestDispatcher("/novaEmpresaCriada.jsp").forward(request, response);
 		
 	}
-
+ 
 }

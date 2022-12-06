@@ -4,6 +4,11 @@ public class Empresa {
 
 	private Integer id;
 	private String nome;
+	
+
+	public Empresa(String nome) {
+		this.nome = nome;
+	}
 
 	public Integer getId() {
 		return id;
