@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import br.com.sdconecta.manager.classes.Banco;
+import br.com.sdconecta.manager.classes.Empresa;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -20,12 +22,12 @@ public class ListCompanyServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		List<Empresa> company = new Banco().getEmpresas();
-
 		
 		request.setAttribute("list", company);
-		request.getRequestDispatcher("/listarEmpresas.jsp").forward(request, response);
 		
-
+		//encapsulou as informações e despachou para a view
+		request.getRequestDispatcher("/listarEmpresas.jsp").forward(request, response); 
+		
 	}
 
 }

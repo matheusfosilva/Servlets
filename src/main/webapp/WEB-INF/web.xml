@@ -37,4 +37,14 @@
     <servlet-name>ListCompanyServlet</servlet-name>
     <url-pattern>/listCompany</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>removeCopanyservlet</display-name>
+    <servlet-name>removeCopanyservlet</servlet-name>
+    <servlet-class>br.com.sdconecta.manager.servlet.removeCopanyservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>removeCopanyservlet</servlet-name>
+    <url-pattern>/removeCopany</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -1,4 +1,4 @@
-<%@page import="br.com.sdconecta.manager.servlet.Empresa"%>
+<%@page import="br.com.sdconecta.manager.classes.Empresa"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -17,10 +17,11 @@
 
 	<ul>
 		<c:forEach items="${list}" var="empresa">
-			<li> ${empresa.nome} </li>
+			<li> ${empresa.id} --  Nome da empresa: ${empresa.nome}  |  CNPJ: ${empresa.cnpj}  |  Data de criação: ${empresa.data}--------------   
+			|<a  >excluir</a>  |<a href=  >editar</a> </li>
 		</c:forEach>
 	</ul>
-	
+	<a href= "FormNovaEmpresa.jsp">Cadastrar Outra empresa</a>
 	
 
 </body>
