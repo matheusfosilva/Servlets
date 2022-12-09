@@ -18,7 +18,7 @@
 	<ul>
 		<c:forEach items="${list}" var="empresa">
 			<li> ${empresa.id} --  Nome da empresa: ${empresa.nome}  |  CNPJ: ${empresa.cnpj}  |  Data de criação: ${empresa.data}--------------   
-			|<a  >excluir</a>  |<a href=  >editar</a> </li>
+			|<a href="removeCompany?id=${empresa.id}"  >excluir</a>  |<a href=  >editar</a> </li>
 		</c:forEach>
 	</ul>
 	<a href= "FormNovaEmpresa.jsp">Cadastrar Outra empresa</a>

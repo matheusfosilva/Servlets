@@ -39,12 +39,12 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>removeCopanyservlet</display-name>
-    <servlet-name>removeCopanyservlet</servlet-name>
-    <servlet-class>br.com.sdconecta.manager.servlet.removeCopanyservlet</servlet-class>
+    <display-name>RemoveCompanyServlet</display-name>
+    <servlet-name>RemoveCompanyServlet</servlet-name>
+    <servlet-class>br.com.sdconecta.manager.servlet.RemoveCompanyServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>removeCopanyservlet</servlet-name>
-    <url-pattern>/removeCopany</url-pattern>
+    <servlet-name>RemoveCompanyServlet</servlet-name>
+    <url-pattern>/removeCompany</url-pattern>
   </servlet-mapping>
 </web-app>
