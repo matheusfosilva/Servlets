@@ -19,12 +19,8 @@ public class RemoveCompanyServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		response.getWriter().append("Served at: " + request.getParameter("id"));
-		
 		new Banco().removeEmpresa(Integer.valueOf( request.getParameter("id") ));
-
-//		response.sendRedirect("listCompany");
-		
+		response.sendRedirect("listCompany");
 	}
 
 }
