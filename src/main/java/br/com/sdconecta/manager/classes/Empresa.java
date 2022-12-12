@@ -9,8 +9,7 @@ public class Empresa {
 	private Integer cnpj;
 	private LocalDate data;
 
-	public Empresa(Integer id, String nome, Integer cnpj, LocalDate data) {
-		this.id = id;
+	public Empresa( String nome, Integer cnpj, LocalDate data) {
 		this.nome = nome;
 		this.cnpj = cnpj;
 		this.data = data;

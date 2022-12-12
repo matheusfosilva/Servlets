@@ -23,9 +23,11 @@ public class ListCompanyServlet extends HttpServlet {
 
 		List<Empresa> company = new Banco().getEmpresas();
 		
+		
+		//Enviando informações como atributos
 		request.setAttribute("list", company);
 		
-		//encapsulou as informações e despachou para a view
+		//Despachando para a View de listar empresas 
 		request.getRequestDispatcher("/listarEmpresas.jsp").forward(request, response); 
 		
 	}

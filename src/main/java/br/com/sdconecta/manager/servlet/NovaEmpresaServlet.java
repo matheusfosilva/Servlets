@@ -23,8 +23,7 @@ public class NovaEmpresaServlet extends HttpServlet {
 		Banco banco = new Banco();
 		
 		banco.add( 
-				new Empresa( banco.getEmpresas().size()+1 , 
-				request.getParameter("nome"),
+				new Empresa( request.getParameter("nome"),
 				Integer.valueOf(request.getParameter("cnpj") ) , 
 				LocalDate.now()));
 		
