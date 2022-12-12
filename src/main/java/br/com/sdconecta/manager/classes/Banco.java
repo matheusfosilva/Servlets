@@ -43,12 +43,17 @@ public class Banco {
 	 * 
 	 * @param id
 	 */
-	public void removeEmpresa(Integer id) {		
-		empresas.forEach(empresa -> {
-			if (empresa.getId() == id) {
-				empresas.remove(empresa);
+	public void removeEmpresa(Integer id) {
+
+		Iterator<Empresa> it = empresas.iterator();
+
+		while (it.hasNext()) {
+			Empresa emp = it.next();
+
+			if (emp.getId() == id) {
+				it.remove();
 			}
-		});
+		}
 	}
 
 }
